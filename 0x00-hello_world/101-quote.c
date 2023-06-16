@@ -9,5 +9,5 @@ int main(void)
 {
 FILE *stderr_stream = stderr;
 fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stderr_stream);
-return 1;
+return (1);
 }
