@@ -1,6 +1,7 @@
-/* Calling _putchar */
+#include "main.h"
+
 int _putchar(char c);
-void printString(const char *str);
+
 /**
  * main - Entry point
  *
