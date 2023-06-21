@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-int limit = 50,i;
+int limit = 50, i;
 unsigned long fib1 = 1, fib2 = 2, fib_next;
 
 printf("%lu, %lu", fib1, fib2);
