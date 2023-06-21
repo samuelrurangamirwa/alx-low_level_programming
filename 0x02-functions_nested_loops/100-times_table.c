@@ -2,31 +2,22 @@
 
 /**
  * print_number - Prints a number with appropriate formatting.
- * @num: The number to be printed.
+ * @result: The number to be printed.
  */
-void print_number(int num)
+
+void print_number(int result)
 {
-if (num < 10)
+if (result >= 100)
 {
-_putchar(' ');
-_putchar(' ');
+_putchar(result / 100 + '0');
+_putchar((result / 10) % 10 + '0');
 }
-else if (num < 100)
+else if (result >= 10)
 {
-_putchar(' ');
+_putchar(result / 10 + '0');
 }
 
-if (num >= 100)
-{
-_putchar(num / 100 + '0');
-_putchar((num / 10) % 10 + '0');
-}
-else if (num >= 10)
-{
-_putchar(num / 10 + '0');
-}
-
-_putchar(num % 10 + '0');
+_putchar(result % 10 + '0');
 }
 
 /**
@@ -54,6 +45,14 @@ _putchar(',');
 }
 _putchar(' ');
 
+if (result < 10)
+{
+_putchar(' ');
+}
+if (result < 100)
+{
+_putchar(' ');
+}
 print_number(result);
 }
 _putchar('\n');
