@@ -8,14 +8,15 @@
 int main(void)
 {
 int limit = 50;
-int fib1 = 1, fib2 = 2, fib_next, i;
+long long fib1 = 1, fib2 = 2, fib_next;
 
-printf("%d, %d", fib1, fib2);
+printf("%lld , %lld", fib1, fib2);
 
-for (i = 3; i <= limit; i++)
+for (int i = 3; i <= limit; i++)
 {
 fib_next = fib1 + fib2;
-printf("%d ,",fib_next);
+printf(" , %lld", fib_next);
+
 fib1 = fib2;
 fib2 = fib_next;
 }
