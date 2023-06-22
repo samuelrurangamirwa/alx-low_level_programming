@@ -6,22 +6,34 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void) {
-uint64_t a = 1, b = 2, c;
-int i;
+#include <stdio.h>
+#include <stdint.h>
 
-printf("%lu, %lu, ", a, b);
-
-for (i = 0; i < 98; i++) 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
-c = a + b;
+int limit = 98, i;
+uint64_t a = 1, b = 2;
+
+printf("%lu", a);
+
+for (i = 3; i <= limit; i++)
+{
+uint64_t temp = a;
 a = b;
-b = c;
+b = temp + b;
 
-printf("%lu", b);
-if (i < 97) 
+if (a <= b)
 {
-printf(", ");
+printf(", %lu", a);
+}
+else
+{
+break;
 }
 }
 
