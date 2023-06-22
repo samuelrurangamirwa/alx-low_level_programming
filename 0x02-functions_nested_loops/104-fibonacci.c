@@ -6,26 +6,22 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
-{
-int limit = 98, i;
-uint64_t a = 1, b = 2;
+int main(void) {
+uint64_t a = 1, b = 2, c;
+int i;
 
-printf("%lu", a);
+printf("%lu, %lu, ", a, b);
 
-for (i = 3; i <= limit; i++)
+for (i = 0; i < 98; i++) 
 {
-uint64_t temp = a;
+c = a + b;
 a = b;
-b = temp + b;
+b = c;
 
-if (a <= b)
+printf("%lu", b);
+if (i < 97) 
 {
-printf(", %lu", a);
-}
-else
-{
-break;
+printf(", ");
 }
 }
 
