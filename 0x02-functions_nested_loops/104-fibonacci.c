@@ -6,14 +6,6 @@
  *
  * Return: Always 0 (Success)
  */
-#include <stdio.h>
-#include <stdint.h>
-
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
 int main(void)
 {
 int limit = 98, i;
