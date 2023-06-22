@@ -9,17 +9,17 @@
 int main(void)
 {
 int limit = 98, i;
-uint64_t a = 0, b = 1;
+uint64_t a = 1, b = 2;
 
 printf("%lu", a);
 
-for (i = 1; i <= limit; i++)
+for (i = 3; i <= limit; i++)
 {
 uint64_t temp = a;
 a = b;
 b = temp + b;
 
-if (a <= b)
+if (a < b)
 {
 printf(", %lu", a);
 }
