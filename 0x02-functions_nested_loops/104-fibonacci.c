@@ -11,12 +11,12 @@ int main(void)
 int limit = 98, i;
 unsigned int fib1 = 1, fib2 = 2;
 
-printf("%d, %d", fib1, fib2);
+printf("%u, %u", fib1, fib2);
 
 for (i = 3; i <= limit; i++)
 {
 unsigned int fib_next;
-if (fib_next > UINT_MAX - fib2)
+if (fib_next > fib2)
 {
 break;
 }
