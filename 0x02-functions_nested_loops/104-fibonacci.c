@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 
 /**
  * main - Entry point
@@ -8,14 +9,19 @@
 int main(void)
 {
 int limit = 98, i;
-int fib1 = 1, fib2 = 2;
+unsigned int fib1 = 1, fib2 = 2;
 
 printf("%d, %d", fib1, fib2);
 
 for (i = 3; i <= limit; i++)
 {
-int fib_next = fib1 + fib2;
-printf(", %d", fib_next);
+unsigned int fib_next;
+if (fib_next > UINT_MAX - fib2)
+{
+break;
+}
+fib_next = fib1 + fib2;
+printf(", %u", fib_next);
 
 fib1 = fib2;
 fib2 = fib_next;
