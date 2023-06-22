@@ -19,7 +19,7 @@ uint64_t temp = a;
 a = b;
 b = temp + b;
 
-if (a < b)
+if (a <= b)
 {
 printf(", %lu", a);
 }
