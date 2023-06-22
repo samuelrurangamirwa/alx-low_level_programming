@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <limits.h>
+#include <stdint.h>
 
 /**
  * main - Entry point
@@ -9,22 +9,24 @@
 int main(void)
 {
 int limit = 98, i;
-unsigned int fib1 = 1, fib2 = 2;
+uint64_t a = 0, b = 1;
 
-printf("%u, %u", fib1, fib2);
+printf("%lu", a);
 
-for (i = 3; i <= limit; i++)
+for (i = 1; i <= limit; i++)
 {
-unsigned int fib_next;
-if (fib_next > fib2)
+uint64_t temp = a;
+a = b;
+b = temp + b;
+
+if (a <= b)
+{
+printf(", %lu", a);
+}
+else
 {
 break;
 }
-fib_next = fib1 + fib2;
-printf(", %u", fib_next);
-
-fib1 = fib2;
-fib2 = fib_next;
 }
 
 printf("\n");
