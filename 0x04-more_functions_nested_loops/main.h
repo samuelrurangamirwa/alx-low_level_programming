@@ -1,8 +1,11 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <ctype.h>
+/**
+ * printString - Prints a string using _putchar
+ * @str: The string to be printed
+ */
 
-int _isdigit(int c);
+int _isupper(int c);
 
 #endif /* MAIN_H */
