@@ -6,16 +6,30 @@
 */
 void print_number(int n)
 {
+int scale = 1;
+int temp = n;
+if (n == 0)
+{
+_putchar('0');
+return;
+}
+
 if (n < 0)
 {
 _putchar('-');
 n = -n;
 }
 
-if (n / 10)
+while (temp > 0)
 {
-print_number(n / 10);
+scale *= 10;
+temp /= 10;
 }
 
-_putchar((n % 10) + '0');
+while (scale > 1)
+{
+scale /= 10;
+_putchar((n / scale) % 10 + '0');
 }
+}
+
