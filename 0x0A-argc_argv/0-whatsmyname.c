@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
 * main - check the code
@@ -8,6 +9,6 @@
 int main(int argc, char *argv[])
 {
 printf("%s\n", argv[0]);
-
-return argc;
+exit(EXIT_SUCCESS);
+return (argc);
 }
