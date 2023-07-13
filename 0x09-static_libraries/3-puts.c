@@ -1,8 +1,18 @@
+#include "main.h"
 #include <stdio.h>
-
-void _puts(const char *s)
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+void _puts(char *str)
 {
-(void)s;
-
-printf("%s\n", s);
+int i = 0;
+while (str[i])
+{
+_putchar(str[i]);
+i++;
 }
+_putchar('\n');
+}
+
