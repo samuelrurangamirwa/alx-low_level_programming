@@ -1,12 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
+
+
 /**
-* main - check the code
+* main - prints the number of arguments passed into it.
+* @argc: argument count
+* @argv: arguments
 *
-* Return: Always 0.
+* Return: 0
 */
-int main(int argc , char *argv[] __attribute__((unused)))
+int main(int argc, char **argv)
 {
+(void)argv;
+
+
 printf("%d\n", argc - 1);
-exit(EXIT_SUCCESS);
+return (0);
 }
+
