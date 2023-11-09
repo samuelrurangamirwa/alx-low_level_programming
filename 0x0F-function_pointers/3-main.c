@@ -1,11 +1,15 @@
 #include "3-calc.h"
 /**
- * main - Entry point
+ * main - Simple calculator program
  *
- * Description: This is the main function of the program.
- * It takes command-line arguments, performs an operation, and returns a result.
+ * Description:
+ * This program performs arithmetic operations based on command-line arguments.
  *
- * Return: 0 on success, other values on failure.
+ * @argc: The number of command-line arguments (expected: 4).
+ * @argv: An array of strings containing the command-line arguments.
+ *
+ * Return:
+ * 0 on success, 98 for argument count error, 99 for an invalid operator.
  */
 int main(int argc, char *argv[])
 {
